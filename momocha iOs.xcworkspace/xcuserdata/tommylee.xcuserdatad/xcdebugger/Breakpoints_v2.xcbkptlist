@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "momocha iOs/Search_FilterViewController.swift"
+            timestampString = "556554719.714347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "Search_FilterViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "momocha_iOs.Search_FilterViewController.sp_label.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "momocha iOs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tommylee/Documents/notes%20sem2%202018/ios/Momochax/momocha%20iOs/momocha%20iOs/Search_FilterViewController.swift"
+                  timestampString = "556535134.409261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "momocha_iOs.Search_FilterViewController.sp_label.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "momocha iOs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tommylee/Documents/notes%20sem2%202018/ios/Momochax/momocha%20iOs/momocha%20iOs/Search_FilterViewController.swift"
+                  timestampString = "556535134.415736"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "momocha_iOs.Search_FilterViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; momocha_iOs.Search_FilterViewController"
+                  moduleName = "momocha iOs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tommylee/Documents/notes%20sem2%202018/ios/Momochax/momocha%20iOs/momocha%20iOs/Search_FilterViewController.swift"
+                  timestampString = "556535134.41816"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "1376">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "momocha_iOs.Search_FilterViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;momocha_iOs.Search_FilterViewController&gt;"
+                  moduleName = "momocha iOs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tommylee/Documents/notes%20sem2%202018/ios/Momochax/momocha%20iOs/momocha%20iOs/Search_FilterViewController.swift"
+                  timestampString = "556535134.420455"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "1340">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

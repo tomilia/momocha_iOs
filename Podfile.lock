@@ -1,0 +1,20 @@
+PODS:
+  - Segmentio (3.0)
+  - XMSegmentedControl (0.1.4)
+
+DEPENDENCIES:
+  - Segmentio (~> 3.0)
+  - XMSegmentedControl
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Segmentio
+    - XMSegmentedControl
+
+SPEC CHECKSUMS:
+  Segmentio: 1607fba3b42230f5f91e997d1a3f337f1176674c
+  XMSegmentedControl: 51cf4f3daf14920692a064d9252aa7b29622dda6
+
+PODFILE CHECKSUM: edc6a625e6662351dd0175666f176e9bbd1a1212
+
+COCOAPODS: 1.5.3

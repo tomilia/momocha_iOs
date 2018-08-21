@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GenJyuuGothicL-Monospace-Light.ttf">
+            <string>GenJyuuGothicL-Monospace-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="resultCellIdentifier" id="gTV-IL-0wX" customClass="resultCell" customModule="momocha_iOs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="330"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="330"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbO-cf-p2O">
+                        <rect key="frame" x="10" y="10" width="280" height="190"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRn-xZ-R7Y">
+                        <rect key="frame" x="20" y="206" width="69" height="33"/>
+                        <fontDescription key="fontDescription" name="GenJyuuGothicL-Monospace-Light" family="Gen Jyuu Gothic L Monospace" pointSize="28"/>
+                        <color key="textColor" red="0.20392156859999999" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="羅湖區" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvG-Uo-Ata">
+                        <rect key="frame" x="20" y="272" width="51" height="20"/>
+                        <fontDescription key="fontDescription" name="GenJyuuGothicL-Monospace-Light" family="Gen Jyuu Gothic L Monospace" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老街站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L84-ta-idq">
+                        <rect key="frame" x="20" y="299" width="55" height="20"/>
+                        <fontDescription key="fontDescription" name="GenJyuuGothicL-Monospace-Light" family="Gen Jyuu Gothic L Monospace" pointSize="17"/>
+                        <color key="textColor" red="0.086274509803921567" green="0.20784313725490194" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" red="0.20392156859999999" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="和平路" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSG-vx-MAe">
+                        <rect key="frame" x="84" y="299" width="51" height="20"/>
+                        <fontDescription key="fontDescription" name="GenJyuuGothicL-Monospace-Light" family="Gen Jyuu Gothic L Monospace" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6DX-mW-NuX">
+                        <rect key="frame" x="20" y="240" width="240" height="28"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7dW-zW-Lew">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fSG-vx-MAe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="84" id="23K-Xw-3f3"/>
+                <constraint firstAttribute="trailing" secondItem="6DX-mW-NuX" secondAttribute="trailing" constant="40" id="72E-Ct-2Uk"/>
+                <constraint firstItem="lvG-Uo-Ata" firstAttribute="top" secondItem="ZRn-xZ-R7Y" secondAttribute="bottom" constant="33" id="9rR-f2-P4r"/>
+                <constraint firstItem="6DX-mW-NuX" firstAttribute="top" secondItem="nbO-cf-p2O" secondAttribute="bottom" constant="40" id="CAu-p6-a66"/>
+                <constraint firstItem="lvG-Uo-Ata" firstAttribute="top" secondItem="6DX-mW-NuX" secondAttribute="bottom" constant="4" id="F6c-RB-tuv"/>
+                <constraint firstItem="nbO-cf-p2O" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="FNu-K3-q3P"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="nbO-cf-p2O" secondAttribute="bottom" constant="130" id="G3N-r0-BB6"/>
+                <constraint firstItem="6DX-mW-NuX" firstAttribute="leading" secondItem="lvG-Uo-Ata" secondAttribute="leading" id="Hw9-on-tLo"/>
+                <constraint firstAttribute="trailing" secondItem="nbO-cf-p2O" secondAttribute="trailing" constant="10" id="J1W-uP-tza"/>
+                <constraint firstItem="L84-ta-idq" firstAttribute="leading" secondItem="lvG-Uo-Ata" secondAttribute="leading" id="dnI-S0-dFF"/>
+                <constraint firstItem="ZRn-xZ-R7Y" firstAttribute="top" secondItem="nbO-cf-p2O" secondAttribute="bottom" constant="6" id="es6-vA-xOb"/>
+                <constraint firstItem="nbO-cf-p2O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="hj3-kP-yWN"/>
+                <constraint firstItem="ZRn-xZ-R7Y" firstAttribute="leading" secondItem="lvG-Uo-Ata" secondAttribute="leading" id="i2s-3p-bAo"/>
+                <constraint firstItem="fSG-vx-MAe" firstAttribute="leading" secondItem="L84-ta-idq" secondAttribute="trailing" constant="9" id="iNF-Nr-J8u"/>
+                <constraint firstItem="6DX-mW-NuX" firstAttribute="leading" secondItem="ZRn-xZ-R7Y" secondAttribute="leading" id="l6o-V3-acI"/>
+                <constraint firstItem="fSG-vx-MAe" firstAttribute="top" secondItem="L84-ta-idq" secondAttribute="top" id="tbf-pb-5Nm"/>
+                <constraint firstItem="L84-ta-idq" firstAttribute="top" secondItem="lvG-Uo-Ata" secondAttribute="bottom" constant="7" id="vhf-ds-hBu"/>
+                <constraint firstItem="ZRn-xZ-R7Y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="z8O-QZ-4bn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="300" height="330"/>
+            <connections>
+                <outlet property="m_image" destination="nbO-cf-p2O" id="RCm-MO-lgd"/>
+                <outlet property="m_title" destination="ZRn-xZ-R7Y" id="Mw6-Ys-u59"/>
+                <outlet property="tagview" destination="6DX-mW-NuX" id="sHH-6Z-H4d"/>
+            </connections>
+            <point key="canvasLocation" x="160" y="194"/>
+        </collectionViewCell>
+    </objects>
+</document>

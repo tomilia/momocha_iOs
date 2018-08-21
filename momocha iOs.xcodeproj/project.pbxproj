@@ -1,0 +1,886 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C3880439B4047BD85E66D24 /* Pods_momocha_iOsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1046E9D969847B92EBCDB79 /* Pods_momocha_iOsTests.framework */; };
+		1A4D9E16B6BB77B1ED9BF51E /* Pods_momocha_iOsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAC27F7695BCE0200527266 /* Pods_momocha_iOsUITests.framework */; };
+		522135C6211B647000B8FABA /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135C5211B647000B8FABA /* SearchPageViewController.swift */; };
+		522135C9211C12F900B8FABA /* photoFragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135C7211C12F900B8FABA /* photoFragViewController.swift */; };
+		522135CC211C154A00B8FABA /* photoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522135CB211C154A00B8FABA /* photoCell.xib */; };
+		522135CE211C156600B8FABA /* photoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135CD211C156600B8FABA /* photoCell.swift */; };
+		522135D4211C59FF00B8FABA /* SearchCataObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135D3211C59FF00B8FABA /* SearchCataObj.swift */; };
+		522135D6211C95BE00B8FABA /* HotFragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135D5211C95BE00B8FABA /* HotFragViewController.swift */; };
+		522135D8211CA1E100B8FABA /* hotSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522135D7211CA1E100B8FABA /* hotSearch.xib */; };
+		522135DB211CA20C00B8FABA /* hotSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135DA211CA20C00B8FABA /* hotSearch.swift */; };
+		522135DD211D6FDC00B8FABA /* EdgeInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135DC211D6FDC00B8FABA /* EdgeInset.swift */; };
+		522135E1211DA26900B8FABA /* preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522135E0211DA26900B8FABA /* preferences.xib */; };
+		522135E3211DA3E100B8FABA /* preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135E2211DA3E100B8FABA /* preferences.swift */; };
+		522135E5211DDA0D00B8FABA /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522135E4211DDA0D00B8FABA /* SearchResult.swift */; };
+		5235D1DF2121841500AED562 /* resultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235D1DD2121841500AED562 /* resultCell.swift */; };
+		5235D1E02121841500AED562 /* resultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5235D1DE2121841500AED562 /* resultCell.xib */; };
+		527CCD752126FB7C008DD922 /* Search_FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527CCD742126FB7C008DD922 /* Search_FilterViewController.swift */; };
+		527CCD772127DC41008DD922 /* ExpandableTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527CCD762127DC41008DD922 /* ExpandableTableHeader.swift */; };
+		527CCD7A2127DFB5008DD922 /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527CCD792127DFB5008DD922 /* FilterType.swift */; };
+		527CCD7C2127E870008DD922 /* filter_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527CCD7B2127E870008DD922 /* filter_cell.swift */; };
+		527CCD7E2127ED76008DD922 /* filter_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527CCD7D2127ED76008DD922 /* filter_cell.xib */; };
+		528A704A2115A877002E5CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A70492115A877002E5CB6 /* AppDelegate.swift */; };
+		528A704C2115A877002E5CB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A704B2115A877002E5CB6 /* ViewController.swift */; };
+		528A704F2115A877002E5CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A704D2115A877002E5CB6 /* Main.storyboard */; };
+		528A70542115A87B002E5CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A70522115A87B002E5CB6 /* LaunchScreen.storyboard */; };
+		528A705F2115A87C002E5CB6 /* momocha_iOsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A705E2115A87C002E5CB6 /* momocha_iOsTests.swift */; };
+		528A706A2115A87C002E5CB6 /* momocha_iOsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A70692115A87C002E5CB6 /* momocha_iOsUITests.swift */; };
+		528A707C2115A8DA002E5CB6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A707A2115A8D9002E5CB6 /* SWRevealViewController.m */; };
+		528A707D2115A8DA002E5CB6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A707A2115A8D9002E5CB6 /* SWRevealViewController.m */; };
+		528A707E2115A8DA002E5CB6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A707A2115A8D9002E5CB6 /* SWRevealViewController.m */; };
+		528A70802115B314002E5CB6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528A707F2115B314002E5CB6 /* Media.xcassets */; };
+		528A70812115B314002E5CB6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528A707F2115B314002E5CB6 /* Media.xcassets */; };
+		528A70822115B314002E5CB6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528A707F2115B314002E5CB6 /* Media.xcassets */; };
+		528A70842115B338002E5CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528A70832115B338002E5CB6 /* Assets.xcassets */; };
+		528A70852115B338002E5CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528A70832115B338002E5CB6 /* Assets.xcassets */; };
+		528A70862115B338002E5CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528A70832115B338002E5CB6 /* Assets.xcassets */; };
+		528A709321187C6D002E5CB6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A709221187C6D002E5CB6 /* Location.swift */; };
+		528A709521187E3D002E5CB6 /* Location.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528A709421187E3D002E5CB6 /* Location.xib */; };
+		528A70972118A8CF002E5CB6 /* suggestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528A70962118A8CF002E5CB6 /* suggestion.xib */; };
+		528A70992118AFAC002E5CB6 /* suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A70982118AFAC002E5CB6 /* suggestion.swift */; };
+		529BFC6321257B2300662938 /* SortTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BFC6221257B2300662938 /* SortTab.swift */; };
+		529BFC652125849600662938 /* HBSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BFC642125849600662938 /* HBSegmentedControl.swift */; };
+		529ED558212C16DA0084D07D /* locationcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529ED557212C16DA0084D07D /* locationcell.xib */; };
+		529ED55A212C22060084D07D /* locationcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529ED559212C22060084D07D /* locationcell.swift */; };
+		D66765CA30D8FCE6F8D884BA /* Pods_momocha_iOs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5457D223834F105A1815B8D /* Pods_momocha_iOs.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		528A705B2115A87C002E5CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528A703E2115A877002E5CB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 528A70452115A877002E5CB6;
+			remoteInfo = "momocha iOs";
+		};
+		528A70662115A87C002E5CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528A703E2115A877002E5CB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 528A70452115A877002E5CB6;
+			remoteInfo = "momocha iOs";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37F96B1CCAE0C06047F6143E /* Pods-momocha iOs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOs/Pods-momocha iOs.debug.xcconfig"; sourceTree = "<group>"; };
+		522135C5211B647000B8FABA /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
+		522135C7211C12F900B8FABA /* photoFragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoFragViewController.swift; sourceTree = "<group>"; };
+		522135CB211C154A00B8FABA /* photoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = photoCell.xib; sourceTree = "<group>"; };
+		522135CD211C156600B8FABA /* photoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCell.swift; sourceTree = "<group>"; };
+		522135D3211C59FF00B8FABA /* SearchCataObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCataObj.swift; sourceTree = "<group>"; };
+		522135D5211C95BE00B8FABA /* HotFragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotFragViewController.swift; sourceTree = "<group>"; };
+		522135D7211CA1E100B8FABA /* hotSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hotSearch.xib; sourceTree = "<group>"; };
+		522135DA211CA20C00B8FABA /* hotSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hotSearch.swift; sourceTree = "<group>"; };
+		522135DC211D6FDC00B8FABA /* EdgeInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInset.swift; sourceTree = "<group>"; };
+		522135E0211DA26900B8FABA /* preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = preferences.xib; sourceTree = "<group>"; };
+		522135E2211DA3E100B8FABA /* preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferences.swift; sourceTree = "<group>"; };
+		522135E4211DDA0D00B8FABA /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		5235D1DD2121841500AED562 /* resultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultCell.swift; sourceTree = "<group>"; };
+		5235D1DE2121841500AED562 /* resultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = resultCell.xib; sourceTree = "<group>"; };
+		527CCD742126FB7C008DD922 /* Search_FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search_FilterViewController.swift; sourceTree = "<group>"; };
+		527CCD762127DC41008DD922 /* ExpandableTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableHeader.swift; sourceTree = "<group>"; };
+		527CCD792127DFB5008DD922 /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
+		527CCD7B2127E870008DD922 /* filter_cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filter_cell.swift; sourceTree = "<group>"; };
+		527CCD7D2127ED76008DD922 /* filter_cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = filter_cell.xib; sourceTree = "<group>"; };
+		528A70462115A877002E5CB6 /* momocha iOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "momocha iOs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		528A70492115A877002E5CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		528A704B2115A877002E5CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		528A704E2115A877002E5CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		528A70532115A87B002E5CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		528A70552115A87B002E5CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528A705A2115A87C002E5CB6 /* momocha iOsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "momocha iOsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		528A705E2115A87C002E5CB6 /* momocha_iOsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momocha_iOsTests.swift; sourceTree = "<group>"; };
+		528A70602115A87C002E5CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528A70652115A87C002E5CB6 /* momocha iOsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "momocha iOsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		528A70692115A87C002E5CB6 /* momocha_iOsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momocha_iOsUITests.swift; sourceTree = "<group>"; };
+		528A706B2115A87C002E5CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528A70772115A8D9002E5CB6 /* momocha iOs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "momocha iOs-Bridging-Header.h"; sourceTree = "<group>"; };
+		528A70782115A8D9002E5CB6 /* momocha iOsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "momocha iOsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		528A70792115A8D9002E5CB6 /* momocha iOsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "momocha iOsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		528A707A2115A8D9002E5CB6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../../Downloads/SWRevealViewControllers 3/SWRevealViewController.m"; sourceTree = "<group>"; };
+		528A707B2115A8DA002E5CB6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../../Downloads/SWRevealViewControllers 3/SWRevealViewController.h"; sourceTree = "<group>"; };
+		528A707F2115B314002E5CB6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		528A70832115B338002E5CB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Momocha!/Momocha!/Assets.xcassets"; sourceTree = "<group>"; };
+		528A709221187C6D002E5CB6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		528A709421187E3D002E5CB6 /* Location.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Location.xib; sourceTree = "<group>"; };
+		528A70962118A8CF002E5CB6 /* suggestion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = suggestion.xib; sourceTree = "<group>"; };
+		528A70982118AFAC002E5CB6 /* suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suggestion.swift; sourceTree = "<group>"; };
+		529BFC6221257B2300662938 /* SortTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTab.swift; sourceTree = "<group>"; };
+		529BFC642125849600662938 /* HBSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBSegmentedControl.swift; sourceTree = "<group>"; };
+		529ED557212C16DA0084D07D /* locationcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = locationcell.xib; sourceTree = "<group>"; };
+		529ED559212C22060084D07D /* locationcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationcell.swift; sourceTree = "<group>"; };
+		58AE3EF8D7915A75E799167D /* Pods-momocha iOs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOs.release.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOs/Pods-momocha iOs.release.xcconfig"; sourceTree = "<group>"; };
+		83BEF01C912B3653C164429B /* Pods-momocha iOsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOsUITests/Pods-momocha iOsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4D71E33CC584300BAB2E269 /* Pods-momocha iOsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOsTests/Pods-momocha iOsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1046E9D969847B92EBCDB79 /* Pods_momocha_iOsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momocha_iOsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5457D223834F105A1815B8D /* Pods_momocha_iOs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momocha_iOs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD88037185B36BF6D19D03F9 /* Pods-momocha iOsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOsUITests/Pods-momocha iOsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EB7E5191C65C8EEFA0256980 /* Pods-momocha iOsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOsTests/Pods-momocha iOsTests.release.xcconfig"; sourceTree = "<group>"; };
+		EBAC27F7695BCE0200527266 /* Pods_momocha_iOsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momocha_iOsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528A70432115A877002E5CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66765CA30D8FCE6F8D884BA /* Pods_momocha_iOs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528A70572115A87C002E5CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3880439B4047BD85E66D24 /* Pods_momocha_iOsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528A70622115A87C002E5CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A4D9E16B6BB77B1ED9BF51E /* Pods_momocha_iOsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0040088B77E43248C14F3300 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37F96B1CCAE0C06047F6143E /* Pods-momocha iOs.debug.xcconfig */,
+				58AE3EF8D7915A75E799167D /* Pods-momocha iOs.release.xcconfig */,
+				A4D71E33CC584300BAB2E269 /* Pods-momocha iOsTests.debug.xcconfig */,
+				EB7E5191C65C8EEFA0256980 /* Pods-momocha iOsTests.release.xcconfig */,
+				83BEF01C912B3653C164429B /* Pods-momocha iOsUITests.debug.xcconfig */,
+				DD88037185B36BF6D19D03F9 /* Pods-momocha iOsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		527CCD782127DF92008DD922 /* Filter Object */ = {
+			isa = PBXGroup;
+			children = (
+				527CCD792127DFB5008DD922 /* FilterType.swift */,
+				527CCD7B2127E870008DD922 /* filter_cell.swift */,
+				527CCD7D2127ED76008DD922 /* filter_cell.xib */,
+				529ED557212C16DA0084D07D /* locationcell.xib */,
+				529ED559212C22060084D07D /* locationcell.swift */,
+			);
+			path = "Filter Object";
+			sourceTree = "<group>";
+		};
+		528A703D2115A877002E5CB6 = {
+			isa = PBXGroup;
+			children = (
+				528A70482115A877002E5CB6 /* momocha iOs */,
+				528A705D2115A87C002E5CB6 /* momocha iOsTests */,
+				528A70682115A87C002E5CB6 /* momocha iOsUITests */,
+				528A70472115A877002E5CB6 /* Products */,
+				0040088B77E43248C14F3300 /* Pods */,
+				A91FCF36EC6288039C4AFBEB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		528A70472115A877002E5CB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528A70462115A877002E5CB6 /* momocha iOs.app */,
+				528A705A2115A87C002E5CB6 /* momocha iOsTests.xctest */,
+				528A70652115A87C002E5CB6 /* momocha iOsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528A70482115A877002E5CB6 /* momocha iOs */ = {
+			isa = PBXGroup;
+			children = (
+				527CCD782127DF92008DD922 /* Filter Object */,
+				528A708721182F55002E5CB6 /* Fonts */,
+				528A70832115B338002E5CB6 /* Assets.xcassets */,
+				528A707B2115A8DA002E5CB6 /* SWRevealViewController.h */,
+				528A707A2115A8D9002E5CB6 /* SWRevealViewController.m */,
+				528A70492115A877002E5CB6 /* AppDelegate.swift */,
+				528A704B2115A877002E5CB6 /* ViewController.swift */,
+				528A704D2115A877002E5CB6 /* Main.storyboard */,
+				528A70522115A87B002E5CB6 /* LaunchScreen.storyboard */,
+				528A70552115A87B002E5CB6 /* Info.plist */,
+				528A70772115A8D9002E5CB6 /* momocha iOs-Bridging-Header.h */,
+				528A70782115A8D9002E5CB6 /* momocha iOsTests-Bridging-Header.h */,
+				528A70792115A8D9002E5CB6 /* momocha iOsUITests-Bridging-Header.h */,
+				528A707F2115B314002E5CB6 /* Media.xcassets */,
+				528A709221187C6D002E5CB6 /* Location.swift */,
+				528A709421187E3D002E5CB6 /* Location.xib */,
+				528A70962118A8CF002E5CB6 /* suggestion.xib */,
+				528A70982118AFAC002E5CB6 /* suggestion.swift */,
+				522135C5211B647000B8FABA /* SearchPageViewController.swift */,
+				522135C7211C12F900B8FABA /* photoFragViewController.swift */,
+				522135CB211C154A00B8FABA /* photoCell.xib */,
+				522135CD211C156600B8FABA /* photoCell.swift */,
+				522135D3211C59FF00B8FABA /* SearchCataObj.swift */,
+				522135D5211C95BE00B8FABA /* HotFragViewController.swift */,
+				522135D7211CA1E100B8FABA /* hotSearch.xib */,
+				522135DA211CA20C00B8FABA /* hotSearch.swift */,
+				522135DC211D6FDC00B8FABA /* EdgeInset.swift */,
+				522135E0211DA26900B8FABA /* preferences.xib */,
+				522135E2211DA3E100B8FABA /* preferences.swift */,
+				522135E4211DDA0D00B8FABA /* SearchResult.swift */,
+				5235D1DD2121841500AED562 /* resultCell.swift */,
+				5235D1DE2121841500AED562 /* resultCell.xib */,
+				529BFC6221257B2300662938 /* SortTab.swift */,
+				529BFC642125849600662938 /* HBSegmentedControl.swift */,
+				527CCD742126FB7C008DD922 /* Search_FilterViewController.swift */,
+				527CCD762127DC41008DD922 /* ExpandableTableHeader.swift */,
+			);
+			path = "momocha iOs";
+			sourceTree = "<group>";
+		};
+		528A705D2115A87C002E5CB6 /* momocha iOsTests */ = {
+			isa = PBXGroup;
+			children = (
+				528A705E2115A87C002E5CB6 /* momocha_iOsTests.swift */,
+				528A70602115A87C002E5CB6 /* Info.plist */,
+			);
+			path = "momocha iOsTests";
+			sourceTree = "<group>";
+		};
+		528A70682115A87C002E5CB6 /* momocha iOsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				528A70692115A87C002E5CB6 /* momocha_iOsUITests.swift */,
+				528A706B2115A87C002E5CB6 /* Info.plist */,
+			);
+			path = "momocha iOsUITests";
+			sourceTree = "<group>";
+		};
+		528A708721182F55002E5CB6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A91FCF36EC6288039C4AFBEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5457D223834F105A1815B8D /* Pods_momocha_iOs.framework */,
+				B1046E9D969847B92EBCDB79 /* Pods_momocha_iOsTests.framework */,
+				EBAC27F7695BCE0200527266 /* Pods_momocha_iOsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528A70452115A877002E5CB6 /* momocha iOs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528A706E2115A87C002E5CB6 /* Build configuration list for PBXNativeTarget "momocha iOs" */;
+			buildPhases = (
+				FFB2B558D5E1ED4FA40BD577 /* [CP] Check Pods Manifest.lock */,
+				528A70422115A877002E5CB6 /* Sources */,
+				528A70432115A877002E5CB6 /* Frameworks */,
+				528A70442115A877002E5CB6 /* Resources */,
+				9BFC8FAAD3DF6D2EE618695C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "momocha iOs";
+			productName = "momocha iOs";
+			productReference = 528A70462115A877002E5CB6 /* momocha iOs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		528A70592115A87C002E5CB6 /* momocha iOsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528A70712115A87C002E5CB6 /* Build configuration list for PBXNativeTarget "momocha iOsTests" */;
+			buildPhases = (
+				B69EDE598302797F3B5F24F2 /* [CP] Check Pods Manifest.lock */,
+				528A70562115A87C002E5CB6 /* Sources */,
+				528A70572115A87C002E5CB6 /* Frameworks */,
+				528A70582115A87C002E5CB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				528A705C2115A87C002E5CB6 /* PBXTargetDependency */,
+			);
+			name = "momocha iOsTests";
+			productName = "momocha iOsTests";
+			productReference = 528A705A2115A87C002E5CB6 /* momocha iOsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		528A70642115A87C002E5CB6 /* momocha iOsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528A70742115A87C002E5CB6 /* Build configuration list for PBXNativeTarget "momocha iOsUITests" */;
+			buildPhases = (
+				691BC5722069CC304E68D656 /* [CP] Check Pods Manifest.lock */,
+				528A70612115A87C002E5CB6 /* Sources */,
+				528A70622115A87C002E5CB6 /* Frameworks */,
+				528A70632115A87C002E5CB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				528A70672115A87C002E5CB6 /* PBXTargetDependency */,
+			);
+			name = "momocha iOsUITests";
+			productName = "momocha iOsUITests";
+			productReference = 528A70652115A87C002E5CB6 /* momocha iOsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528A703E2115A877002E5CB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Tommy Lee";
+				TargetAttributes = {
+					528A70452115A877002E5CB6 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					528A70592115A87C002E5CB6 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						TestTargetID = 528A70452115A877002E5CB6;
+					};
+					528A70642115A87C002E5CB6 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						TestTargetID = 528A70452115A877002E5CB6;
+					};
+				};
+			};
+			buildConfigurationList = 528A70412115A877002E5CB6 /* Build configuration list for PBXProject "momocha iOs" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528A703D2115A877002E5CB6;
+			productRefGroup = 528A70472115A877002E5CB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528A70452115A877002E5CB6 /* momocha iOs */,
+				528A70592115A87C002E5CB6 /* momocha iOsTests */,
+				528A70642115A87C002E5CB6 /* momocha iOsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528A70442115A877002E5CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522135CC211C154A00B8FABA /* photoCell.xib in Resources */,
+				528A70972118A8CF002E5CB6 /* suggestion.xib in Resources */,
+				527CCD7E2127ED76008DD922 /* filter_cell.xib in Resources */,
+				528A70542115A87B002E5CB6 /* LaunchScreen.storyboard in Resources */,
+				528A70802115B314002E5CB6 /* Media.xcassets in Resources */,
+				528A709521187E3D002E5CB6 /* Location.xib in Resources */,
+				529ED558212C16DA0084D07D /* locationcell.xib in Resources */,
+				528A70842115B338002E5CB6 /* Assets.xcassets in Resources */,
+				522135D8211CA1E100B8FABA /* hotSearch.xib in Resources */,
+				5235D1E02121841500AED562 /* resultCell.xib in Resources */,
+				522135E1211DA26900B8FABA /* preferences.xib in Resources */,
+				528A704F2115A877002E5CB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528A70582115A87C002E5CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528A70852115B338002E5CB6 /* Assets.xcassets in Resources */,
+				528A70812115B314002E5CB6 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528A70632115A87C002E5CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528A70862115B338002E5CB6 /* Assets.xcassets in Resources */,
+				528A70822115B314002E5CB6 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		691BC5722069CC304E68D656 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-momocha iOsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BFC8FAAD3DF6D2EE618695C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-momocha iOs/Pods-momocha iOs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Segmentio/Segmentio.framework",
+				"${BUILT_PRODUCTS_DIR}/XMSegmentedControl/XMSegmentedControl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Segmentio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMSegmentedControl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momocha iOs/Pods-momocha iOs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B69EDE598302797F3B5F24F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-momocha iOsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFB2B558D5E1ED4FA40BD577 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-momocha iOs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528A70422115A877002E5CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528A704C2115A877002E5CB6 /* ViewController.swift in Sources */,
+				522135C9211C12F900B8FABA /* photoFragViewController.swift in Sources */,
+				528A704A2115A877002E5CB6 /* AppDelegate.swift in Sources */,
+				522135E3211DA3E100B8FABA /* preferences.swift in Sources */,
+				527CCD772127DC41008DD922 /* ExpandableTableHeader.swift in Sources */,
+				529BFC652125849600662938 /* HBSegmentedControl.swift in Sources */,
+				529ED55A212C22060084D07D /* locationcell.swift in Sources */,
+				5235D1DF2121841500AED562 /* resultCell.swift in Sources */,
+				528A709321187C6D002E5CB6 /* Location.swift in Sources */,
+				522135CE211C156600B8FABA /* photoCell.swift in Sources */,
+				527CCD752126FB7C008DD922 /* Search_FilterViewController.swift in Sources */,
+				529BFC6321257B2300662938 /* SortTab.swift in Sources */,
+				522135C6211B647000B8FABA /* SearchPageViewController.swift in Sources */,
+				522135DD211D6FDC00B8FABA /* EdgeInset.swift in Sources */,
+				522135E5211DDA0D00B8FABA /* SearchResult.swift in Sources */,
+				527CCD7C2127E870008DD922 /* filter_cell.swift in Sources */,
+				522135D6211C95BE00B8FABA /* HotFragViewController.swift in Sources */,
+				528A707C2115A8DA002E5CB6 /* SWRevealViewController.m in Sources */,
+				522135D4211C59FF00B8FABA /* SearchCataObj.swift in Sources */,
+				528A70992118AFAC002E5CB6 /* suggestion.swift in Sources */,
+				522135DB211CA20C00B8FABA /* hotSearch.swift in Sources */,
+				527CCD7A2127DFB5008DD922 /* FilterType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528A70562115A87C002E5CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528A705F2115A87C002E5CB6 /* momocha_iOsTests.swift in Sources */,
+				528A707D2115A8DA002E5CB6 /* SWRevealViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528A70612115A87C002E5CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528A706A2115A87C002E5CB6 /* momocha_iOsUITests.swift in Sources */,
+				528A707E2115A8DA002E5CB6 /* SWRevealViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		528A705C2115A87C002E5CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 528A70452115A877002E5CB6 /* momocha iOs */;
+			targetProxy = 528A705B2115A87C002E5CB6 /* PBXContainerItemProxy */;
+		};
+		528A70672115A87C002E5CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 528A70452115A877002E5CB6 /* momocha iOs */;
+			targetProxy = 528A70662115A87C002E5CB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		528A704D2115A877002E5CB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528A704E2115A877002E5CB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		528A70522115A87B002E5CB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528A70532115A87B002E5CB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		528A706C2115A87C002E5CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		528A706D2115A87C002E5CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		528A706F2115A87C002E5CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F96B1CCAE0C06047F6143E /* Pods-momocha iOs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QP4MJYAUK6;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+				INFOPLIST_FILE = "momocha iOs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ss.momochaios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "momocha iOs/momocha iOs-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		528A70702115A87C002E5CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58AE3EF8D7915A75E799167D /* Pods-momocha iOs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QP4MJYAUK6;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+				INFOPLIST_FILE = "momocha iOs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ss.momochaios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "momocha iOs/momocha iOs-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		528A70722115A87C002E5CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D71E33CC584300BAB2E269 /* Pods-momocha iOsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "momocha iOsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ss.momocha-iOsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "momocha iOs/momocha iOsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/momocha iOs.app/momocha iOs";
+			};
+			name = Debug;
+		};
+		528A70732115A87C002E5CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7E5191C65C8EEFA0256980 /* Pods-momocha iOsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "momocha iOsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ss.momocha-iOsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "momocha iOs/momocha iOsTests-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/momocha iOs.app/momocha iOs";
+			};
+			name = Release;
+		};
+		528A70752115A87C002E5CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83BEF01C912B3653C164429B /* Pods-momocha iOsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "momocha iOsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ss.momocha-iOsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "momocha iOs/momocha iOsUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "momocha iOs";
+			};
+			name = Debug;
+		};
+		528A70762115A87C002E5CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD88037185B36BF6D19D03F9 /* Pods-momocha iOsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "momocha iOsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ss.momocha-iOsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "momocha iOs/momocha iOsUITests-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "momocha iOs";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528A70412115A877002E5CB6 /* Build configuration list for PBXProject "momocha iOs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528A706C2115A87C002E5CB6 /* Debug */,
+				528A706D2115A87C002E5CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528A706E2115A87C002E5CB6 /* Build configuration list for PBXNativeTarget "momocha iOs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528A706F2115A87C002E5CB6 /* Debug */,
+				528A70702115A87C002E5CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528A70712115A87C002E5CB6 /* Build configuration list for PBXNativeTarget "momocha iOsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528A70722115A87C002E5CB6 /* Debug */,
+				528A70732115A87C002E5CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528A70742115A87C002E5CB6 /* Build configuration list for PBXNativeTarget "momocha iOsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528A70752115A87C002E5CB6 /* Debug */,
+				528A70762115A87C002E5CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528A703E2115A877002E5CB6 /* Project object */;
+}
