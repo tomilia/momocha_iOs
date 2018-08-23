@@ -5,192 +5,124 @@
 //  Created by Tommy Lee on 17/8/2018.
 //  Copyright © 2018 Tommy Lee. All rights reserved.
 //
-
 import UIKit
 protocol Search_FilterViewControllerDelegate: class {
     func removeBlurredBackgroundView()
     func showNav()
 }
-class Search_FilterViewController: UIViewController{
-    var selectedCell = [IndexPath]()
+protocol TableDelegate: class{
+    func returnSelected()
+    
+}
+//每月书籍
+struct BookPreview {
+    var title:String
+    var names:[String]
+    var images:[UIImage]?
+}
+
+class Search_FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var locationSelect = [String]()
+    @IBOutlet weak var submit: UIButton!
+    
+    @IBAction func submitAct(_ sender: Any) {
+        print(table_delegate?.returnSelected())
+    }
+    @IBAction func cancel(_ sender: Any) {
+        self.view.isHidden = true
+        dismiss(animated: true, completion: nil)
+        
+        delegate?.removeBlurredBackgroundView()
+        delegate?.showNav()
+    }
+    weak var table_delegate: TableDelegate?
     weak var delegate: Search_FilterViewControllerDelegate?
-    let arrayx = ["AAA","BBB","CCC","DDD","EEE","FFF","GGG"]
-    var estimateWidth = 120.0
-    var cellMarginSize = 1.0
-
-    @IBOutlet weak var sp_HeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var stationHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var place_table: UITableView!
-    @IBOutlet weak var m_nav: UINavigationItem!
-
-    @IBAction func m_return(_ sender: Any) {
-        shadow_view.isHidden = true
-        dismiss(animated: true, completion: nil)
-        delegate?.removeBlurredBackgroundView()
-        delegate?.showNav()
-    }
-    @objc func back(sender: UIBarButtonItem){
-        shadow_view.isHidden = true
-        dismiss(animated: true, completion: nil)
-        delegate?.removeBlurredBackgroundView()
-        delegate?.showNav()
-    }
-
-    @IBOutlet weak var close: UIButton!
-    @IBOutlet weak var shadow_view: UIView!
+    //所有书籍数据
+    let books = [
+        BookPreview(title: "地區🤧",names:["羅湖區","老街區","？？區","!!區","xx區"],images:nil),
+        BookPreview(title: "地鐵站👿",names:["羅湖站","老街站","？？站"],images:nil),
+        BookPreview(title: "附加服務😮",names:["wifi","乒乓球","yea","yea","yea","yea","yea"],images:[#imageLiteral(resourceName: "home-s1x"),#imageLiteral(resourceName: "magnifying1x"),#imageLiteral(resourceName: "heart1x"),#imageLiteral(resourceName: "heart1x"),#imageLiteral(resourceName: "heart1x"),#imageLiteral(resourceName: "heart1x"),#imageLiteral(resourceName: "heart1x")])
+    ]
     
-    @IBOutlet weak var stationview: UICollectionView!
+    //显示内容的tableView
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var collectionview: UICollectionView!
+    override func loadView() {
+        super.loadView()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*mx_nav.titleTextAttributes = [kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "HelveticaNeue-Light",size: 22)!]*/
-        let newBackButton = UIBarButtonItem(image: #imageLiteral(resourceName: "cancel1x"), style: UIBarButtonItemStyle.done, target: self, action: #selector(Search_FilterViewController.back(sender:)))
-
-        self.collectionview.delegate = self
-        //colection delegate
-        self.collectionview.dataSource = self
-        //register xib
-        let height = self.collectionview.collectionViewLayout.collectionViewContentSize.height
-        print("sp2",height)
-        self.collectionview.register(UINib(nibName: "filter_cell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
-        self.collectionview.allowsSelection = true
-        self.collectionview.allowsMultipleSelection = true
-        //Setup Grid View
-        self.stationview.delegate = self
-        self.stationview.dataSource = self
-        self.stationview.register(UINib(nibName: "locationcell", bundle: nil), forCellWithReuseIdentifier: "locationCell")
-        self.stationview.allowsSelection = true
+        //设置tableView代理
+        self.tableView!.delegate = self
+        self.tableView!.dataSource = self
         
-        self.setupGridView()
- 
-        //self.setupBlur()
-        // Do any additional setup after loading the view.
+        //去除单元格分隔线
+        self.tableView!.separatorStyle = .none
+        roundtheButton()
+        //创建一个重用的单元格
+
     }
-    func setupBlur(){
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
-            view.backgroundColor = .clear
-            
-            let blurEffect = UIBlurEffect(style: .dark)
-            let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            //always fill the view
-            blurEffectView.frame = self.view.bounds
-            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            
-            view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
-        } else {
-            view.backgroundColor = .black
-        }
+    func roundtheButton(){
+        self.submit.layer.cornerRadius = 10
+        self.submit.clipsToBounds = true
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
- 
-        self.setupGridView()
-        DispatchQueue.main.async {
-            self.collectionview.reloadData()
-            self.stationview.reloadData()
-        }
- 
+    //在本例中，只有一个分区
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
     }
+    
+    //返回表格行数
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.books.count
+    }
+    
+    
+    //创建各单元显示内容(创建参数indexPath指定的单元）
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell {
+         
+            if indexPath[1] == 2
+                
+            {
+                self.tableView!.register(UINib(nibName:"tableimageViewCell", bundle:nil),forCellReuseIdentifier:"tableimageCell")
+                print("tablex",self.tableView)
+                //设置estimatedRowHeight属性默认值
+                self.tableView!.estimatedRowHeight = 44.0
+                //rowHeight属性设置为UITableViewAutomaticDimension
+                self.tableView!.rowHeight = UITableViewAutomaticDimension
+                let cell = tableView.dequeueReusableCell(withIdentifier: "tableimageCell")
+                    as! filter_cell_image_TableViewCell
+                cell.frame = tableView.bounds
+                cell.layoutIfNeeded()
+   
+                //重新加载单元格数据
+                cell.reloadData(title:books[indexPath.row].title,names:books[indexPath.row].names,images: books[indexPath.row].images!)
+                return cell
+                
+            }
+            else
+            {
+                self.tableView!.register(UINib(nibName:"tableViewCell", bundle:nil),
+                                         forCellReuseIdentifier:"tableCell")
+                print("tablex",self.tableView)
+                //设置estimatedRowHeight属性默认值
+                self.tableView!.estimatedRowHeight = 34.0
+                //rowHeight属性设置为UITableViewAutomaticDimension
+                self.tableView!.rowHeight = UITableViewAutomaticDimension
+                let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell")
+                as! filter_cell_TableViewCell
+                cell.frame = tableView.bounds
+                cell.layoutIfNeeded()
+                //重新加载单元格数据
+                cell.reloadData(title:books[indexPath.row].title,names:books[indexPath.row].names)
+                return cell
+            }
+
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func setupGridView(){
-        
-        var flow = collectionview?.collectionViewLayout as! UICollectionViewFlowLayout
-        flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
-        flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
-        flow = stationview?.collectionViewLayout as! UICollectionViewFlowLayout
-        flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
-        flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
-        
-        let height = self.collectionview.collectionViewLayout.collectionViewContentSize.height
-        print("sp",height)
-
-        
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-extension Search_FilterViewController: UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == collectionview
-        {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! filter_cell
-
-              return cell
-        }
-        else
-        {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "locationCell", for: indexPath) as! locationcell
-              return cell
-        }
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        if collectionView == collectionview
-        {
-            return self.arrayx.count
-        }
-        else
-        {
-            return 4
-        }
-    }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)!
-        selectedCell.append(indexPath)
-        print(selectedCell)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)!
-        if selectedCell.contains(indexPath) {
-            selectedCell.remove(at: selectedCell.index(of: indexPath)!)
-print(selectedCell)
-        }
-    }
-    
-    
-}
-
-extension Search_FilterViewController: UICollectionViewDelegateFlowLayout{
-  
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width  = self.calculateWidth()
-        
-        return CGSize(width: width,height: width)
-    }
-    func calculateWidth() -> CGFloat{
-        let estimatedWidth = CGFloat(estimateWidth)
-        let cellCount = floor(CGFloat(self.view.frame.size.width) / estimatedWidth)
-        print("cell count",cellCount*estimatedWidth+((cellCount+1) * CGFloat(cellMarginSize)))
-        
-        let margin = CGFloat(cellMarginSize * 2)
-        let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
-        
-        return width
-    }
-}
-extension UILabel{
-    func setBottomBorder(){
-        self.layer.shadowColor = UIColor.darkGray.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowRadius = 0.0
     }
 }

@@ -13,30 +13,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="locationCell" id="FQW-xV-uZN" customClass="locationcell" customModule="momocha_iOs" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="121" height="125"/>
+            <rect key="frame" x="0.0" y="0.0" width="133" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                <rect key="frame" x="0.0" y="0.0" width="121" height="125"/>
+                <rect key="frame" x="0.0" y="0.0" width="133" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-w6-Cef">
-                        <rect key="frame" x="39.5" y="52" width="42" height="21"/>
+                        <rect key="frame" x="46" y="35" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoX-iV-eev">
+                        <rect key="frame" x="118" y="0.0" width="15" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="HoX-iV-eev" firstAttribute="top" secondItem="FQW-xV-uZN" secondAttribute="top" id="KSR-wm-v0f"/>
                 <constraint firstItem="dFn-w6-Cef" firstAttribute="centerY" secondItem="FQW-xV-uZN" secondAttribute="centerY" id="OMf-uZ-IUy"/>
                 <constraint firstItem="dFn-w6-Cef" firstAttribute="centerX" secondItem="FQW-xV-uZN" secondAttribute="centerX" id="jQE-gs-Znn"/>
+                <constraint firstAttribute="trailing" secondItem="HoX-iV-eev" secondAttribute="trailing" id="uNy-f8-LlL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="EqU-jQ-Pgb"/>
-            <size key="customSize" width="116" height="118"/>
+            <size key="customSize" width="128" height="124"/>
             <connections>
                 <outlet property="m_label" destination="dFn-w6-Cef" id="5QS-dk-KVJ"/>
+                <outlet property="test" destination="HoX-iV-eev" id="e6Y-rM-kCx"/>
             </connections>
-            <point key="canvasLocation" x="-39" y="-23"/>
+            <point key="canvasLocation" x="-33.5" y="-21"/>
         </collectionViewCell>
     </objects>
 </document>

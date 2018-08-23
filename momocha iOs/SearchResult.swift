@@ -17,6 +17,7 @@ enum SegmentioPosition {
     case fixed(maxVisibleItems: Int)
 }
 struct result{
+    
     let id: Int?
     let CHtitle: String?
     let ENGTitle: String?
@@ -235,14 +236,14 @@ class SearchResult: UIViewController,UICollectionViewDelegate, UICollectionViewD
     func performSearch(str: String,sort: String)
     {
  
-        self.result_show.removeAll()
+        
         self.loading.isHidden = false
         let url = NSURL(string: "http://59.148.36.170:8000/filter/?q=&page=1&sort="+sort)
         print(sort)
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             
             
-            guard let jsonObj = (try?
+            guard let jsonObj = (try!
                 JSONSerialization.jsonObject(with: data!,options: JSONSerialization.ReadingOptions())) as? [String: Any]
                 else {
                     return
@@ -250,15 +251,17 @@ class SearchResult: UIViewController,UICollectionViewDelegate, UICollectionViewD
             print(jsonObj)
             if let temp = self.convertToDictionary(text: jsonObj["numpost"] as! String)
             {
-                
+                self.result_show.removeAll()
                 for tp in temp
                 {
+                    
                     var tpx=(tp as! [String:Any])
                     self.result_show.append(result(json: tpx)
                     )
                 }
                  DispatchQueue.main.async() {
                 if self.result_show.count > 0{
+                    
                     print("fuck",self.result_show.count)
                     self.resultCollection.reloadData()
                     self.loading.isHidden = true
@@ -415,4 +418,11 @@ class RadioButton: UIButton {
         }
     }
 }
-
+extension UILabel{
+    func setBottomBorder(){
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
+}

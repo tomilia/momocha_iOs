@@ -51,6 +51,13 @@
 		529BFC652125849600662938 /* HBSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BFC642125849600662938 /* HBSegmentedControl.swift */; };
 		529ED558212C16DA0084D07D /* locationcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529ED557212C16DA0084D07D /* locationcell.xib */; };
 		529ED55A212C22060084D07D /* locationcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529ED559212C22060084D07D /* locationcell.swift */; };
+		529ED55C212C67FC0084D07D /* filter_cell_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529ED55B212C67FC0084D07D /* filter_cell_TableViewCell.swift */; };
+		529ED55E212D3A7D0084D07D /* tableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529ED55D212D3A7D0084D07D /* tableViewCell.xib */; };
+		529ED563212D59D00084D07D /* locationcellwithimageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529ED561212D59D00084D07D /* locationcellwithimageCollectionViewCell.swift */; };
+		529ED564212D59D00084D07D /* locationcellwithimageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529ED562212D59D00084D07D /* locationcellwithimageCollectionViewCell.xib */; };
+		529ED566212D5C6E0084D07D /* filter_cell_image_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529ED565212D5C6E0084D07D /* filter_cell_image_TableViewCell.swift */; };
+		529ED568212D61720084D07D /* tableimageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529ED567212D61720084D07D /* tableimageViewCell.xib */; };
+		529ED56A212E83F30084D07D /* GenJyuuGothicL-Monospace-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 529ED569212E83F00084D07D /* GenJyuuGothicL-Monospace-Light.ttf */; };
 		D66765CA30D8FCE6F8D884BA /* Pods_momocha_iOs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5457D223834F105A1815B8D /* Pods_momocha_iOs.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +126,13 @@
 		529BFC642125849600662938 /* HBSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBSegmentedControl.swift; sourceTree = "<group>"; };
 		529ED557212C16DA0084D07D /* locationcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = locationcell.xib; sourceTree = "<group>"; };
 		529ED559212C22060084D07D /* locationcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationcell.swift; sourceTree = "<group>"; };
+		529ED55B212C67FC0084D07D /* filter_cell_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filter_cell_TableViewCell.swift; sourceTree = "<group>"; };
+		529ED55D212D3A7D0084D07D /* tableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableViewCell.xib; sourceTree = "<group>"; };
+		529ED561212D59D00084D07D /* locationcellwithimageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationcellwithimageCollectionViewCell.swift; sourceTree = "<group>"; };
+		529ED562212D59D00084D07D /* locationcellwithimageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = locationcellwithimageCollectionViewCell.xib; sourceTree = "<group>"; };
+		529ED565212D5C6E0084D07D /* filter_cell_image_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filter_cell_image_TableViewCell.swift; sourceTree = "<group>"; };
+		529ED567212D61720084D07D /* tableimageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableimageViewCell.xib; sourceTree = "<group>"; };
+		529ED569212E83F00084D07D /* GenJyuuGothicL-Monospace-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothicL-Monospace-Light.ttf"; sourceTree = "<group>"; };
 		58AE3EF8D7915A75E799167D /* Pods-momocha iOs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOs.release.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOs/Pods-momocha iOs.release.xcconfig"; sourceTree = "<group>"; };
 		83BEF01C912B3653C164429B /* Pods-momocha iOsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOsUITests/Pods-momocha iOsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D71E33CC584300BAB2E269 /* Pods-momocha iOsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momocha iOsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momocha iOsTests/Pods-momocha iOsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +192,12 @@
 				527CCD7D2127ED76008DD922 /* filter_cell.xib */,
 				529ED557212C16DA0084D07D /* locationcell.xib */,
 				529ED559212C22060084D07D /* locationcell.swift */,
+				529ED565212D5C6E0084D07D /* filter_cell_image_TableViewCell.swift */,
+				529ED55B212C67FC0084D07D /* filter_cell_TableViewCell.swift */,
+				529ED55D212D3A7D0084D07D /* tableViewCell.xib */,
+				529ED561212D59D00084D07D /* locationcellwithimageCollectionViewCell.swift */,
+				529ED562212D59D00084D07D /* locationcellwithimageCollectionViewCell.xib */,
+				529ED567212D61720084D07D /* tableimageViewCell.xib */,
 			);
 			path = "Filter Object";
 			sourceTree = "<group>";
@@ -268,6 +288,7 @@
 		528A708721182F55002E5CB6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				529ED569212E83F00084D07D /* GenJyuuGothicL-Monospace-Light.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -394,8 +415,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				522135CC211C154A00B8FABA /* photoCell.xib in Resources */,
+				529ED564212D59D00084D07D /* locationcellwithimageCollectionViewCell.xib in Resources */,
 				528A70972118A8CF002E5CB6 /* suggestion.xib in Resources */,
 				527CCD7E2127ED76008DD922 /* filter_cell.xib in Resources */,
+				529ED568212D61720084D07D /* tableimageViewCell.xib in Resources */,
 				528A70542115A87B002E5CB6 /* LaunchScreen.storyboard in Resources */,
 				528A70802115B314002E5CB6 /* Media.xcassets in Resources */,
 				528A709521187E3D002E5CB6 /* Location.xib in Resources */,
@@ -404,6 +427,8 @@
 				522135D8211CA1E100B8FABA /* hotSearch.xib in Resources */,
 				5235D1E02121841500AED562 /* resultCell.xib in Resources */,
 				522135E1211DA26900B8FABA /* preferences.xib in Resources */,
+				529ED55E212D3A7D0084D07D /* tableViewCell.xib in Resources */,
+				529ED56A212E83F30084D07D /* GenJyuuGothicL-Monospace-Light.ttf in Resources */,
 				528A704F2115A877002E5CB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,12 +480,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-momocha iOs/Pods-momocha iOs-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Segmentio/Segmentio.framework",
-				"${BUILT_PRODUCTS_DIR}/XMSegmentedControl/XMSegmentedControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Segmentio.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMSegmentedControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -513,10 +536,12 @@
 				528A704C2115A877002E5CB6 /* ViewController.swift in Sources */,
 				522135C9211C12F900B8FABA /* photoFragViewController.swift in Sources */,
 				528A704A2115A877002E5CB6 /* AppDelegate.swift in Sources */,
+				529ED566212D5C6E0084D07D /* filter_cell_image_TableViewCell.swift in Sources */,
 				522135E3211DA3E100B8FABA /* preferences.swift in Sources */,
 				527CCD772127DC41008DD922 /* ExpandableTableHeader.swift in Sources */,
 				529BFC652125849600662938 /* HBSegmentedControl.swift in Sources */,
 				529ED55A212C22060084D07D /* locationcell.swift in Sources */,
+				529ED563212D59D00084D07D /* locationcellwithimageCollectionViewCell.swift in Sources */,
 				5235D1DF2121841500AED562 /* resultCell.swift in Sources */,
 				528A709321187C6D002E5CB6 /* Location.swift in Sources */,
 				522135CE211C156600B8FABA /* photoCell.swift in Sources */,
@@ -528,6 +553,7 @@
 				527CCD7C2127E870008DD922 /* filter_cell.swift in Sources */,
 				522135D6211C95BE00B8FABA /* HotFragViewController.swift in Sources */,
 				528A707C2115A8DA002E5CB6 /* SWRevealViewController.m in Sources */,
+				529ED55C212C67FC0084D07D /* filter_cell_TableViewCell.swift in Sources */,
 				522135D4211C59FF00B8FABA /* SearchCataObj.swift in Sources */,
 				528A70992118AFAC002E5CB6 /* suggestion.swift in Sources */,
 				522135DB211CA20C00B8FABA /* hotSearch.swift in Sources */,
