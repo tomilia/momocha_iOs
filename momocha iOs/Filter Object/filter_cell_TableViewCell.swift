@@ -7,20 +7,17 @@
 //
 
 import UIKit
+protocol locationSelectionDelegate {
+    func returnLocation(sc: [String])
+}
+class filter_cell_TableViewCell: UITableViewCell {
 
-class filter_cell_TableViewCell: UITableViewCell,TableDelegate {
-
-    
-    func returnSelected() {
-        print( selectedCell.count)
-    }
-    
   
-    
+    var delegate :locationSelectionDelegate?
     var name:[String] = []
     let estimateWidth = 110.0
     let cellMarginSize = 3.0
-var selectedCell = [IndexPath]()
+var selectedCell = [String]()
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -138,15 +135,15 @@ extension filter_cell_TableViewCell: UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)!
-        selectedCell.append(indexPath)
-        
+        selectedCell.append(name[indexPath.item])
+        delegate?.returnLocation(sc: selectedCell)
         print(selectedCell)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)!
-        if selectedCell.contains(indexPath) {
-            selectedCell.remove(at: selectedCell.index(of: indexPath)!)
+        if selectedCell.contains(name[indexPath.item]) {
+            selectedCell.remove(at: selectedCell.index(of: name[indexPath.item])!)
             print(selectedCell)
         }
     }

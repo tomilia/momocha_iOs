@@ -9,11 +9,9 @@ import UIKit
 protocol Search_FilterViewControllerDelegate: class {
     func removeBlurredBackgroundView()
     func showNav()
+    func requestByQuery()
 }
-protocol TableDelegate: class{
-    func returnSelected()
-    
-}
+
 //每月书籍
 struct BookPreview {
     var title:String
@@ -21,21 +19,41 @@ struct BookPreview {
     var images:[UIImage]?
 }
 
-class Search_FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Search_FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,CustomCellDelegate,locationSelectionDelegate {
+    var tempQuery = [String : String]()
+    func returnLocation(sc: [String]) {
+        let transformed_sc = sc.joined(separator: ",")
+        tempQuery["district"] = transformed_sc
+    }
+    
+    func cellButtonTapped(sc: [Int]) {
+        
+        let transformed_sc = sc.map(String.init).joined(separator: ",")
+        tempQuery["additional_service"] = transformed_sc
+    }
+    func putTempQuerytoCurrentQ(){
+        queryResult["district"] = tempQuery["district"]
+        queryResult["additional_service"] = tempQuery["additional_service"]
+    }
     var locationSelect = [String]()
     @IBOutlet weak var submit: UIButton!
-    
     @IBAction func submitAct(_ sender: Any) {
-        print(table_delegate?.returnSelected())
+        putTempQuerytoCurrentQ()
+        delegate?.requestByQuery()
+        backToResult()
     }
+    
     @IBAction func cancel(_ sender: Any) {
+        tempQuery.removeAll()
+       backToResult()
+    }
+    func backToResult(){
         self.view.isHidden = true
         dismiss(animated: true, completion: nil)
         
         delegate?.removeBlurredBackgroundView()
         delegate?.showNav()
     }
-    weak var table_delegate: TableDelegate?
     weak var delegate: Search_FilterViewControllerDelegate?
     //所有书籍数据
     let books = [
@@ -53,16 +71,19 @@ class Search_FilterViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //设置tableView代理
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
-        
+        resetQuery()
         //去除单元格分隔线
         self.tableView!.separatorStyle = .none
         roundtheButton()
         //创建一个重用的单元格
 
+    }
+    func resetQuery(){
+        queryResult["additional_service"]?.removeAll()
+        queryResult["district"]?.removeAll()
     }
     func roundtheButton(){
         self.submit.layer.cornerRadius = 10
@@ -77,9 +98,8 @@ class Search_FilterViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.books.count
     }
+   
     
-    
-    //创建各单元显示内容(创建参数indexPath指定的单元）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
          
@@ -89,11 +109,10 @@ class Search_FilterViewController: UIViewController, UITableViewDelegate, UITabl
                 self.tableView!.register(UINib(nibName:"tableimageViewCell", bundle:nil),forCellReuseIdentifier:"tableimageCell")
                 print("tablex",self.tableView)
                 //设置estimatedRowHeight属性默认值
-                self.tableView!.estimatedRowHeight = 44.0
-                //rowHeight属性设置为UITableViewAutomaticDimension
-                self.tableView!.rowHeight = UITableViewAutomaticDimension
+
                 let cell = tableView.dequeueReusableCell(withIdentifier: "tableimageCell")
                     as! filter_cell_image_TableViewCell
+                cell.delegate = self
                 cell.frame = tableView.bounds
                 cell.layoutIfNeeded()
    
@@ -108,11 +127,10 @@ class Search_FilterViewController: UIViewController, UITableViewDelegate, UITabl
                                          forCellReuseIdentifier:"tableCell")
                 print("tablex",self.tableView)
                 //设置estimatedRowHeight属性默认值
-                self.tableView!.estimatedRowHeight = 34.0
-                //rowHeight属性设置为UITableViewAutomaticDimension
-                self.tableView!.rowHeight = UITableViewAutomaticDimension
+
                 let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell")
                 as! filter_cell_TableViewCell
+                cell.delegate = self
                 cell.frame = tableView.bounds
                 cell.layoutIfNeeded()
                 //重新加载单元格数据

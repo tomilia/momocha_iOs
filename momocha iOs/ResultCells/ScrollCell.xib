@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scroll" rowHeight="177" id="zcF-Ax-0z4" customClass="ScrollCell" customModule="momocha_iOs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="177"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zcF-Ax-0z4" id="Iui-tj-DqC">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="176.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VjQ-5q-lCN">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="177"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fpi-eY-kse">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VjQ-5q-lCN" firstAttribute="leading" secondItem="Iui-tj-DqC" secondAttribute="leading" id="3dP-7z-Wdb"/>
+                    <constraint firstAttribute="trailing" secondItem="VjQ-5q-lCN" secondAttribute="trailing" id="8xG-ww-hdi"/>
+                    <constraint firstAttribute="bottom" secondItem="VjQ-5q-lCN" secondAttribute="bottom" id="KVL-fD-JuC"/>
+                    <constraint firstItem="VjQ-5q-lCN" firstAttribute="top" secondItem="Iui-tj-DqC" secondAttribute="top" id="WMq-Hs-sGX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.086274509799999996" green="0.20784313730000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="pagerView" destination="VjQ-5q-lCN" id="mJg-AZ-gA0"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="6.5"/>
+        </tableViewCell>
+    </objects>
+</document>

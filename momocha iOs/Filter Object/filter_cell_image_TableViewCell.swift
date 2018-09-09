@@ -8,20 +8,22 @@
 
 
 import UIKit
+protocol CustomCellDelegate : class {
+    func cellButtonTapped(sc: [Int])
+}
+class filter_cell_image_TableViewCell: UITableViewCell {
+ 
 
-class filter_cell_image_TableViewCell: UITableViewCell,TableDelegate {
-    func returnSelected() {
-        print(selectedCell.count)
-    }
     
-    
+    var delegate: CustomCellDelegate?
     let estimateWidth = 110.0
     let cellMarginSize = 3.0
     var name:[String] = []
     var images:[UIImage] = []
-    var selectedCell = [IndexPath]()
+    var selectedCell = [Int]()
     @IBOutlet weak var titleLabel: UILabel!
     
+
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -48,6 +50,7 @@ class filter_cell_image_TableViewCell: UITableViewCell,TableDelegate {
      
      }
      */
+
     func reloadData(title:String, names:[String],images:[UIImage]) {
         //设置标题
         self.titleLabel.text = title
@@ -144,17 +147,18 @@ return name.count
  }
  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
  let cell = collectionView.cellForItem(at: indexPath)!
- selectedCell.append(indexPath)
-    
- print(selectedCell)
+ selectedCell.append(indexPath.item+1)
+   delegate?.cellButtonTapped(sc: selectedCell)
  }
  
  func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
  let cell = collectionView.cellForItem(at: indexPath)!
- if selectedCell.contains(indexPath) {
- selectedCell.remove(at: selectedCell.index(of: indexPath)!)
- print(selectedCell)
+
+ if selectedCell.contains(indexPath.item + 1) {
+ selectedCell.remove(at: selectedCell.index(of: indexPath.item+1)!)
+ delegate?.cellButtonTapped(sc: selectedCell)
  }
+ 
  }
  
  
