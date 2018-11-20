@@ -135,7 +135,7 @@ class filter_cell_image_TableViewCell: UITableViewCell {
 }
  extension filter_cell_image_TableViewCell: UICollectionViewDataSource{
  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "locationimageCell",for: indexPath) as! locationcellwithimageCollectionViewCell
+    let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "extra_item_service",for: indexPath) as! locationcellwithimageCollectionViewCell
     cell.m_label.text = name[indexPath.item]
     cell.m_image.image = images[indexPath.item]
     return cell

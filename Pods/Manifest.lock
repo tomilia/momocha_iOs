@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Segmentio (3.0)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Segmentio (~> 3.0)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Segmentio
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Segmentio: 1607fba3b42230f5f91e997d1a3f337f1176674c
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: 4bed5b8446393879d2cd64ddad0a14da6c5b4834
+
+COCOAPODS: 1.5.3

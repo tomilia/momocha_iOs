@@ -85,7 +85,11 @@ class InfoTableViewCell: UITableViewCell,UITableViewDataSource,UITableViewDelega
         //绘制路径
         context.strokePath()
     }
-    
+    func updateData(data:[String?])
+    {
+        self.dataArr = data
+        subTable.reloadData()
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         print("dfs")

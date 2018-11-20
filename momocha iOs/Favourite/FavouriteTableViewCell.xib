@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GenJyuuGothicL-Monospace-Normal.ttf">
+            <string>GenJyuuGothicL-Monospace-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouritecell" rowHeight="118" id="6bR-nn-MkE" customClass="FavouriteTableViewCell" customModule="momocha_iOs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6bR-nn-MkE" id="KB8-bb-qmc">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="117.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m_money1x" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-qH-FD6">
+                        <rect key="frame" x="16" y="15" width="88" height="88"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="88" id="Bq7-SL-TI8"/>
+                            <constraint firstAttribute="width" constant="88" id="gaN-kx-VAP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiK-oL-Cqc">
+                        <rect key="frame" x="124" y="21" width="42" height="24"/>
+                        <fontDescription key="fontDescription" name="GenJyuuGothicL-Monospace-Normal" family="Gen Jyuu Gothic L Monospace" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MMc-qH-FD6" firstAttribute="top" secondItem="KB8-bb-qmc" secondAttribute="top" constant="15" id="BZV-2Y-zCC"/>
+                    <constraint firstItem="QiK-oL-Cqc" firstAttribute="leading" secondItem="MMc-qH-FD6" secondAttribute="trailing" constant="20" id="G20-3B-YXR"/>
+                    <constraint firstAttribute="bottom" secondItem="MMc-qH-FD6" secondAttribute="bottom" constant="15" id="f9N-mG-vz3"/>
+                    <constraint firstItem="MMc-qH-FD6" firstAttribute="top" secondItem="QiK-oL-Cqc" secondAttribute="bottom" constant="-30" id="xeO-2u-AtH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="MMc-qH-FD6" firstAttribute="leading" secondItem="6bR-nn-MkE" secondAttribute="leading" constant="16" id="htO-kM-zEZ"/>
+            </constraints>
+            <connections>
+                <outlet property="label" destination="QiK-oL-Cqc" id="nmd-Gk-pcf"/>
+                <outlet property="store_image" destination="MMc-qH-FD6" id="b6F-z1-IVb"/>
+            </connections>
+            <point key="canvasLocation" x="88.5" y="91"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="m_money1x" width="25" height="25"/>
+    </resources>
+</document>
