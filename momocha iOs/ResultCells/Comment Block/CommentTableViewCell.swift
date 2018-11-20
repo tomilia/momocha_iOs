@@ -11,7 +11,7 @@ import UIKit
 class CommentTableViewCell: UITableViewCell,UITableViewDataSource,UITableViewDelegate  {
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    
+    var delegate: cmsegueDelegator!
     @IBOutlet weak var commentTable: UIDynamicTableView!
     var cmArr = [cmx]()
     
@@ -61,16 +61,22 @@ class CommentTableViewCell: UITableViewCell,UITableViewDataSource,UITableViewDel
         
         return footerView
     }
+    @objc func moreComment(sender: Any?)
+    {
+        var mydata = "Anydata you want to send to the next controller"
+        if(self.delegate != nil){ //Just to be safe.
+            self.delegate.callSegueFromCell(myData:mydata as AnyObject)
+        }
+    }
     
     func moreButton(screenWidth: CGFloat) -> UIButton{
   
         
         let moreButton = UIButton(type: .custom)
         moreButton.setTitle("更多評論", for: .normal)
-        moreButton.addTarget(self, action: "loginAction", for: .touchUpInside)
+        moreButton.addTarget(self, action: #selector(moreComment(sender:)), for: .touchUpInside)
         moreButton.setTitleColor(UIColor(red: 54/256, green: 163/256, blue: 162/256, alpha: 1), for: .normal)
         moreButton.backgroundColor = UIColor.white
-        
         moreButton.frame = CGRect(x: 0,y: 0,width: screenWidth / 2 - 0.5,height: 50)
         return moreButton
     }

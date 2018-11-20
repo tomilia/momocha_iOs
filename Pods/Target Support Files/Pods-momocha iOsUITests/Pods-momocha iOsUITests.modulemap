@@ -1,0 +1,6 @@
+framework module Pods_momocha_iOsUITests {
+  umbrella header "Pods-momocha iOsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

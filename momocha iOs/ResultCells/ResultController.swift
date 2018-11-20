@@ -11,14 +11,15 @@ import Alamofire
 import SwiftyJSON
 struct store_detail{
     
-    let district: String?
-    let lang: Int?
-    let long: Int?
-    let CHtitle: String?
-    let CNtitle: String?
-    let ENGtitle: String?
-    let telephone: String?
-    let full_address: String?
+    let district: String!
+    let lang: Int!
+    let long: Int!
+    let CHtitle: String!
+    let CNtitle: String!
+    let ENGtitle: String!
+    let telephone: String!
+    let full_address: String!
+    
     init(json: JSON){
         CHtitle = json["CHtitle"].string
         CNtitle = json["CNtitle"].string
@@ -36,7 +37,14 @@ struct cmx{
     let rating: Int?
 
 }
-class ResultController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol cmsegueDelegator {
+    func callSegueFromCell(myData dataobject: AnyObject)
+}
+class ResultController: UIViewController, UITableViewDelegate, UITableViewDataSource,cmsegueDelegator {
+    func callSegueFromCell(myData dataobject: AnyObject) {
+        self.performSegue(withIdentifier: "moreCm", sender: dataobject)
+    }
+    
     
     
     struct StoryBoard{
@@ -84,7 +92,7 @@ statusBar.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: y)
         print("Y",y)
         
     }
-  
+    
     func jsonToString(json: AnyObject){
         do {
             let data1 =  try JSONSerialization.data(withJSONObject: json, options: []) // first of all convert json to the data
@@ -104,9 +112,12 @@ var url = "http://59.148.36.170:8000/search0/result/"
                 "Content-Type": "application/json"
             ]
         url += String(index!)
+        
         Alamofire.request(url, headers: headers).responseJSON (completionHandler: { (response) in
                 switch response.result{
                 case .success(var value):
+          
+                        
                     let cv = JSON(value)
                     print("cx",String(describing: cv["cx"]))
                     if let dataFromString = String(describing: cv["cx"]).data(using: String.Encoding.utf8, allowLossyConversion: false) {
@@ -125,7 +136,7 @@ var url = "http://59.148.36.170:8000/search0/result/"
                         
                         self.result_detail = store_detail(json: json[0]["fields"])
                         print("rdxc",self.result_detail)
-                        
+                        self.main_table.reloadData()
                     }
                     if let cmString = String(describing: cv["cm"]).data(using: String.Encoding.utf8, allowLossyConversion: false) {
                         var json :JSON
@@ -146,11 +157,9 @@ var url = "http://59.148.36.170:8000/search0/result/"
                             self.cm.append(cmx(author: subJson["user"].string, content: subJson["content"].string, rating: 5))
                            print("xox",subJson["content"])
                         }
-                        
-                        
-                       
+                        self.main_table.reloadData()
+                    
                     }
-                    self.main_table.reloadData()
                 case .failure(let error):
               
                     print(error.localizedDescription)
@@ -182,6 +191,7 @@ var url = "http://59.148.36.170:8000/search0/result/"
     var service = ["","","","",""]
     var itemService = ["","","","","",""]
     var index :Int?
+
     var result_detail : store_detail?
     @IBOutlet weak var main_table: UITableView!
     override func viewWillAppear(_ animated: Bool) {
@@ -197,6 +207,7 @@ var url = "http://59.148.36.170:8000/search0/result/"
         main_table.dataSource = self
         main_table.separatorStyle = .none
         do{
+            
             try fetchData()
         }
         catch{
@@ -317,12 +328,14 @@ var url = "http://59.148.36.170:8000/search0/result/"
              
                 cell = InfoTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "infoCell")
                 }
-                main_table.rowHeight = (cell?.tableViewHeight())!
                 
+                var dataArr :[String?] = []
                 cell?.frame = tableView.bounds
                 cell?.layoutIfNeeded()
-                
-                cell?.dataArr = [result_detail?.telephone,result_detail?.full_address,result_detail?.ENGtitle]
+                print(result_detail?.telephone,result_detail?.full_address,result_detail?.ENGtitle)
+                dataArr = [result_detail?.telephone,result_detail?.full_address,result_detail?.ENGtitle]
+                cell?.updateData(data: dataArr)
+                main_table.rowHeight = (cell?.tableViewHeight())!
                  print("rdc",cell?.dataArr)
                 return cell!
                 
@@ -371,7 +384,7 @@ var url = "http://59.148.36.170:8000/search0/result/"
                 print("tbb",tableView.bounds.width)
                 cell.frame = tableView.bounds
                 cell.layoutIfNeeded()
-               
+               cell.delegate = self
                 cell.cmArr = cm
                 cell.reloaddata()
                 //重新加载单元格数据
